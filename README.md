@@ -1,4 +1,4 @@
-Some Simple and Practical ComfyUI Image Processing Nodes
+Some simple&practical ComfyUI image processing nodes
 
 
 
