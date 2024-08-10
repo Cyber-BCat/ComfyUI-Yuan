@@ -1,0 +1,779 @@
+{
+  "last_node_id": 35,
+  "last_link_id": 41,
+  "nodes": [
+    {
+      "id": 32,
+      "type": "Reroute",
+      "pos": [
+        565.412303124344,
+        782.7026255786668
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            35,
+            36,
+            38
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 22,
+      "type": "YuanBW",
+      "pos": [
+        792,
+        1070
+      ],
+      "size": {
+        "0": 252,
+        "1": 26
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 20,
+          "label": "image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            21
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "YuanBW"
+      }
+    },
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "pos": [
+        49,
+        819
+      ],
+      "size": [
+        264.9290900448447,
+        385.0482819719059
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            20,
+            23,
+            34
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "202b3972294be94ed087f910ecdeae498a0aa926817d5d3ecbc6b5801230d367.png",
+        "image"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "LoadImage",
+      "pos": [
+        59,
+        1256
+      ],
+      "size": [
+        249.7584141394364,
+        370.9647298152099
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            26
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "1291d6ea0e8fddeac296b005e02a14c8c4cda478cc264b1eb50e30f3be288e9d.png",
+        "image"
+      ]
+    },
+    {
+      "id": 25,
+      "type": "Yuan Transfer",
+      "pos": [
+        770,
+        1303
+      ],
+      "size": {
+        "0": 315,
+        "1": 146
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "target",
+          "type": "IMAGE",
+          "link": 23,
+          "label": "target"
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 26,
+          "label": "source"
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 25,
+          "label": "mask"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            22
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Yuan Transfer"
+      },
+      "widgets_values": [
+        "soft_light",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 28,
+      "type": "ImageToMask",
+      "pos": [
+        681,
+        1189
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 24,
+          "label": "image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            25
+          ],
+          "shape": 3,
+          "label": "MASK",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageToMask"
+      },
+      "widgets_values": [
+        "red"
+      ]
+    },
+    {
+      "id": 35,
+      "type": "PreviewImage",
+      "pos": [
+        1088,
+        541
+      ],
+      "size": [
+        248.74637257157224,
+        313.31176948397365
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 41,
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 33,
+      "type": "PreviewImage",
+      "pos": [
+        1342,
+        757
+      ],
+      "size": [
+        180.91311138466608,
+        267.8386049555247
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 39,
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 24,
+      "type": "PreviewImage",
+      "pos": [
+        1106,
+        1068
+      ],
+      "size": [
+        220.320394503638,
+        335.1018648904908
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 21,
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 31,
+      "type": "ImageMinusMask",
+      "pos": [
+        739,
+        554
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 35,
+          "label": "image"
+        },
+        {
+          "name": "mask",
+          "type": "IMAGE",
+          "link": 33,
+          "label": "mask"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            41
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageMinusMask"
+      },
+      "widgets_values": [
+        "PNG"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "ImageMinusMask",
+      "pos": [
+        750,
+        762
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 36,
+          "label": "image"
+        },
+        {
+          "name": "mask",
+          "type": "IMAGE",
+          "link": 31,
+          "label": "mask"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            39
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageMinusMask"
+      },
+      "widgets_values": [
+        "BLACK"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "PreviewImage",
+      "pos": [
+        1539,
+        904
+      ],
+      "size": [
+        188.84299349080175,
+        282.8157234208543
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 40,
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 17,
+      "type": "ImageMinusMask",
+      "pos": [
+        755,
+        908
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 38,
+          "label": "image"
+        },
+        {
+          "name": "mask",
+          "type": "IMAGE",
+          "link": 30,
+          "label": "mask"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            40
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageMinusMask"
+      },
+      "widgets_values": [
+        "WHITE"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "Reroute",
+      "pos": [
+        581,
+        925
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 29,
+          "label": ""
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            30,
+            31,
+            33
+          ],
+          "slot_index": 0,
+          "label": ""
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 27,
+      "type": "LoadImage",
+      "pos": [
+        341,
+        1057
+      ],
+      "size": [
+        221.2777102304517,
+        391.779307825994
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24,
+            29
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "gothgirl mask.png",
+        "image"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "PreviewImage",
+      "pos": [
+        1386,
+        1291
+      ],
+      "size": [
+        333.12270037652934,
+        391.14077797694586
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 22,
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    }
+  ],
+  "links": [
+    [
+      20,
+      10,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      21,
+      22,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      25,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      10,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      27,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      28,
+      0,
+      25,
+      2,
+      "MASK"
+    ],
+    [
+      26,
+      11,
+      0,
+      25,
+      1,
+      "IMAGE"
+    ],
+    [
+      29,
+      27,
+      0,
+      30,
+      0,
+      "*"
+    ],
+    [
+      30,
+      30,
+      0,
+      17,
+      1,
+      "IMAGE"
+    ],
+    [
+      31,
+      30,
+      0,
+      29,
+      1,
+      "IMAGE"
+    ],
+    [
+      33,
+      30,
+      0,
+      31,
+      1,
+      "IMAGE"
+    ],
+    [
+      34,
+      10,
+      0,
+      32,
+      0,
+      "*"
+    ],
+    [
+      35,
+      32,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      36,
+      32,
+      0,
+      29,
+      0,
+      "IMAGE"
+    ],
+    [
+      38,
+      32,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      39,
+      29,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ],
+    [
+      40,
+      17,
+      0,
+      34,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      31,
+      0,
+      35,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workspace_info": {
+      "id": "2rkSq1KxtbBiWMqJjZg1K",
+      "saveLock": false,
+      "cloudID": null,
+      "coverMediaPath": null
+    },
+    "ds": {
+      "scale": 0.6115909044841653,
+      "offset": [
+        482.7850424841913,
+        -452.0155937936088
+      ]
+    }
+  },
+  "version": 0.4
+}
