@@ -11,6 +11,7 @@ Mask subtraction: using original image and B&W mask generates the segmented imag
 
 Transfer like photoshot, such as 'hard light, multiply' and so on...
 
-
+you can download the default workflow from 'examples' or from this url:
+https://github.com/Cyber-Blacat/ComfyUI-Yuan/blob/main/examples/Yuan%20example%20workflow.json
 
 by B_Cat
