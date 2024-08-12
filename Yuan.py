@@ -336,7 +336,10 @@ class ImageJudgment:
         diff_in_diff_area_lab = np.sqrt(np.sum(diff_lab ** 2, axis=-1))
         diff_in_diff_area_lab[~diff_mask] = 0  # 仅保留差异区域的色差
 
-        return np.mean(diff_in_diff_area_lab[diff_mask])
+        if np.isnan(np.mean(diff_in_diff_area_lab[diff_mask])):
+            return 0.0
+        else:
+            return np.mean(diff_in_diff_area_lab[diff_mask])
 
     def judge_images(self, image1, image2, threshold):
         """
