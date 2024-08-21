@@ -1,4 +1,7 @@
-不需要复杂操作，直接用，生成灰度图片，以及通过mask抠出图片剩余部分。
+不需要复杂操作，直接用，
+节点：black and white 生成灰度图片，
+minus mask 通过mask抠出图片剩余部分,
+Yuan transfer 实现Photoshop中正片叠底、硬光等图片叠加功能，可以使用这个节点保留原图图像特征，例如文字等。
 
 Some simple&practical ComfyUI image processing nodes
 
