@@ -1,3 +1,5 @@
+不需要复杂操作，直接用，生成灰度图片，以及通过mask抠出图片剩余部分。
+
 Some simple&practical ComfyUI image processing nodes
 
 
