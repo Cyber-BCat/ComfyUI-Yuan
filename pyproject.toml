@@ -10,6 +10,6 @@ Repository = "https://github.com/Cyber-Blacat/ComfyUI-Yuan"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "cyber-bcat"
 DisplayName = "ComfyUI-Yuan"
 Icon = ""
