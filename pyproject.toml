@@ -6,10 +6,10 @@ license = {file = "LICENSE"}
 dependencies = ["opencv-python"]
 
 [project.urls]
-Repository = "https://github.com/Cyber-BlackCat/ComfyUI-MoneyMaker"
+Repository = "https://github.com/Cyber-Blacat/ComfyUI-MoneyMaker"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = "cyber-blackcat"
+PublisherId = "cyber-blacat"
 DisplayName = "ComfyUI-MoneyMaker"
 Icon = "🐱"
